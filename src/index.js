@@ -1,20 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Layout from './Layout';
-import Habits from './pages/Habits';
-import AddHabits from './pages/AddHabits';
 
-const App = () => {
-  return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route exact path="/" element={<Habits />} />
-          <Route exact path="/addHabits" element={<AddHabits />} />
-        </Routes>
-      </Layout>
-    </Router>
-  );
-};
+//  import 'bootstrap/dist/css/bootstrap.min.css';
+import store from './store/store'
+ import { Provider } from 'react-redux'
 
-export default App;
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    {/* <App /> */}
+    <Provider store={store}>
+       
+       <App />
+
+     </Provider>
+    
+  </React.StrictMode>,
+)
