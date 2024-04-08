@@ -27,12 +27,11 @@ Track your habits using the app and also maintain a weekly streak to know how ma
 ![image](https://github.com/kyrios12/React_tracker/assets/103828615/d0a53a4f-54d1-4d88-acaa-f6bbd8b1328c)
 ![image](https://github.com/kyrios12/React_tracker/assets/103828615/c904d7ae-dc4f-470a-b293-5221d12571a9)
 
-![image](https://github.com/kyrios12/React_tracker/assets/103828615/9ce88d88-b7bc-46af-9ab5-192c675b1a9b)
 
 ### Home Page
 ![image](https://github.com/kyrios12/React_tracker/assets/103828615/e76481b5-2809-4724-b9a2-f90a8bb634c5)
 ### Streak Page
-![image](https://github.com/kyrios12/React_tracker/assets/103828615/ee3043de-f3f8-48aa-93ff-7399895ee06b)
+![image](https://github.com/kyrios12/React_tracker/assets/103828615/9ce88d88-b7bc-46af-9ab5-192c675b1a9b)
 ### Components
 
 - **Navbar Component**: ![image](https://github.com/kyrios12/React_tracker/assets/103828615/8f32f2f4-0119-49f2-8731-b0b3b501d0bb)
