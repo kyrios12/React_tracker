@@ -48,7 +48,6 @@ Track your habits using the app and also maintain a weekly streak to know how ma
 
 - **Landing Route**: http://localhost:3000/
 - **Streak Route**: http://localhost:3000/weekly
-- 
 ## Exception Handling
 
 Exceptions are handled for scenarios like:
