@@ -13,7 +13,7 @@ Track your habits using the app and also maintain a weekly streak to know how ma
 
 ## Getting Started
 
-1. Clone the repository: [GIT Repo](https://github.com/kyrios12/React_tracker)
+1. Clone the repository: (https://github.com/kyrios12/React_tracker)
 2. Project live Demo: (https://react-tracker-alpha.vercel.app/)
 3. Navigate to the project directory and extract the files.
 4. Run `npm install` to install the required packages.
