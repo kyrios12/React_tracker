@@ -9,7 +9,7 @@ import { addHabit } from "../../action";
 
 function AddAlbum() {
   const [inputData, setInputData] = useState('');
-
+  // without accessing store we can get any component using useSelector
   const habits = useSelector((state) => state.habitsReducer);
   console.log(habits);
   const dispatch = useDispatch();
@@ -29,20 +29,20 @@ function AddAlbum() {
          </div>
       <Modal.Dialog className="border border-danger rounded">
         <Modal.Header >
-          <Modal.Title className='text-danger'>Habit Add </Modal.Title>
+          <Modal.Title className='text-danger'>Habit Tracker </Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
           <div className="form-group">
-            <label className='text-danger fw-bold'>Habit Name</label>
-            <input type="text" className="form-control mt-2 mb-3 border border-danger fw-bold " value={inputData} onChange={(event) => setInputData(event.target.value)} autoFocus />
+            {/* <label className='text-danger fw-bold'>Habit Name</label> */}
+            <input type="text" className="form-control mt-2 mb-3 border border-danger fw-bold " placeholder='Add Habit'value={inputData} onChange={(event) => setInputData(event.target.value)} autoFocus />
            
           </div>
         </Modal.Body>
 
         <Modal.Footer>
           <Button variant="danger" onClick={handleAddHabit} >
-            Add Habit
+            Confirm
           </Button>
         </Modal.Footer>
       </Modal.Dialog>

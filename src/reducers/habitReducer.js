@@ -1,5 +1,5 @@
 import { ADD_HABIT, DELETE_HABIT, ADD_HABIT_STATUS, ADD_WEEKLY_DONE_STATUS } from "../action";
-
+// here month logic
 const months = [
     "JAN",
     "FEB",
@@ -15,34 +15,33 @@ const months = [
     "DEC",
   ];
   
-  const d0 = new Date();
-  const month0 = months[d0.getMonth()];
-  const date0 = d0.getDate();
-
-  var d1 = new Date(Date.now() - 864e5);
+// 86400000 short hand notation 864e5
+  var d1 = new Date(Date.now());  // current day
   const month1 = months[d1.getMonth()];
   const date1 = d1.getDate();
 
-  var d2 = new Date(Date.now() - 2 * 864e5);
+  var d2 = new Date(Date.now() + 864e5); // next
   const month2 = months[d2.getMonth()];
   const date2 = d2.getDate();
 
-  var d3 = new Date(Date.now() - 3*864e5);
+  var d3 = new Date(Date.now() + 2*864e5);   // two days
   const month3 = months[d3.getMonth()];
   const date3 = d3.getDate();
 
-  var d4 = new Date(Date.now() - 4 * 864e5);
+  var d4 = new Date(Date.now() + 3 * 864e5); // three
   const month4 = months[d4.getMonth()];
   const date4 = d4.getDate();
 
-  var d5 = new Date(Date.now() -5*864e5);
+  var d5 = new Date(Date.now() +4*864e5);  // four
   const month5 = months[d5.getMonth()];
   const date5 = d5.getDate();
 
-  var d6 = new Date(Date.now() -6*864e5);
-  const month6 = months[d6.getMonth()];
+  var d6 = new Date(Date.now() +5*864e5); // five
+  // console.log(d6);  // Jan 31 
+  const month6 = months[d6.getMonth()]; //  returns month name based on index passed
   const date6 = d6.getDate();
 
+  // This generates date based on the date when habit is created
   const weekdays = [
        {
         day : `${date1} ${month1}` , 
@@ -104,10 +103,8 @@ const initialHabitsState = {
 
 export function habitsReducer(state = initialHabitsState, action) {
   switch (action.type) {
-    case ADD_HABIT:
+    case ADD_HABIT: {
       const { id, name } = action.payload;
-
-      
 
       return {
         ...state,
@@ -121,16 +118,16 @@ export function habitsReducer(state = initialHabitsState, action) {
           },
         ],
       };
-
-    case DELETE_HABIT:
+    }
+    case DELETE_HABIT: {
       const newList = state.list.filter((elem) => elem.id !== action.id);
 
       return {
         ...state,
         list: newList,
       };
-
-    case ADD_HABIT_STATUS:
+    }
+    case ADD_HABIT_STATUS: {
       var updatedList = state.list.map((elem) =>
         elem.id === action.id
           ? { ...elem, doneStatus : action.doneStatus }
@@ -141,8 +138,8 @@ export function habitsReducer(state = initialHabitsState, action) {
         ...state,
         list: updatedList,
       };
-
-    case ADD_WEEKLY_DONE_STATUS:
+    }
+    case ADD_WEEKLY_DONE_STATUS: {
     var updatedWeekdays = [] ;  
      state.list.map((elem) =>{
          if(elem.id === action.id){
@@ -167,8 +164,9 @@ export function habitsReducer(state = initialHabitsState, action) {
         ...state,
         list : updatedList2 
       };
-
-    default:
+    }
+    default: {
       return state;
+    }
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import { useDispatch , useSelector } from "react-redux";
-import { addHabitStatus , addWeeklyDoneStatus } from "../../action";
+import { useDispatch} from "react-redux";
+import { addWeeklyDoneStatus } from "../../action";
 import styles from "../../styles/home.module.css";
 
 const ActionDayButton = (props) => {

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from "react-redux";
 import './index.css';
 import App from './components/App';
-import '../node_modules/react-bootstrap/dist/react-bootstrap'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import reportWebVitals from './reportWebVitals';
 import store from "./store";
 import { BrowserRouter } from "react-router-dom";

@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import { IoTrashBin } from "react-icons/io5";
 
 const HabitCard = (props) => {
-  const { habit } = props;
+  const { habit } = props; // destructuring
   var target = 6;
   var progress = 0;
 
@@ -36,7 +36,7 @@ const HabitCard = (props) => {
           </div>
           <div>
             <div className='float-end shadow-sm me-2'>
-              <Button variant='me-3' > <IoTrashBin className='icon' onClick={() => { if (window.confirm(`Are you want to sure Habit Delete => ${habit.name}`)) { handleDeleteHabit(habit.name) } }} />  </Button>
+              <Button variant='me-3' > <IoTrashBin className='icon' onClick={() => { if (window.confirm(`Confirm to  Delete => ${habit.name}`)) { handleDeleteHabit(habit.name) } }} />  </Button>
             </div>
           </div>
         </div>

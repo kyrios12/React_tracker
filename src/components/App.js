@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom"; 
-import Home from "./today/Home" ; 
+import AddAlbum from "./today/Home" ; 
 import TopNav from "./today/TopNav";
 import Weekly from "./week/Weekly";
 
@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <div className="Container">
-      <TopNav />
+      <TopNav /> {/* To display content at the top of navbar */}
         <Routes>
-         <Route path="/" element={<Home />} />
+         <Route path="/" element={<AddAlbum />} />
          <Route path="/weekly" element={<Weekly />} />
         </Routes>
       </div>

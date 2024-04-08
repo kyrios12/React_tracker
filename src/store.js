@@ -1,17 +1,22 @@
-import { createStore } from "redux";
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from './reducers';
 
-import rootReducer from "./reducers";
+// Load state from localStorage if it exists
+const preloadedState = localStorage.getItem('state')
+  ? JSON.parse(localStorage.getItem('state'))
+  : {};
 
-const persistentState = localStorage.getItem('state') ? JSON.parse(localStorage.getItem('state')) : {}
-const store = createStore(rootReducer, persistentState) ; 
-console.log("store",store);
+  // Configuring Store
+const store = configureStore({
+  reducer: rootReducer,
+  preloadedState: preloadedState,
+});
 
-// const store = createStore(rootReducer , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) ; 
-
+// Subscribe to store changes to persist state in localStorage
 store.subscribe(() => {
-    const state = store.getState();
-    const serializedState = JSON.stringify(state);
-    localStorage.setItem('state', serializedState);
-  }) ; 
+  const state = store.getState();
+  const serializedState = JSON.stringify(state);
+  localStorage.setItem('state', serializedState);
+});
 
-export default store ;
+export default store;

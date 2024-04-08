@@ -2,11 +2,11 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useSelector , useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 import WeeklyCard from "./WeeklyCard";
 
 const Weekly = () => {
-  const habits = useSelector((state) => state.habitsReducer);
+  const habits = useSelector((state) => state.habitsReducer); // useSelector is used to extract data without connecting the store pass this in props to weekly card
   console.log(habits);
   
   return (
