@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Habit_Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Track your habits using the app and also maintain a weekly streak to know how many you are following the habit.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Browse the previously added habits.
+- Add new habits.
+- Flag habits based in Weekly streak.
+- Track weekly progess.
+- Edit or modify existing habits.
+- Delete old habits.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository: [GIT Repo](https://github.com/kyrios12/React_tracker)
+2. Project live Demo: (https://react-tracker-alpha.vercel.app/)
+3. Navigate to the project directory and extract the files.
+4. Run `npm install` to install the required packages.
+5. Navigate to [http://localhost:3000/](http://localhost:3000/) in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## High-Level Design
 
-### `npm test`
+![image](https://github.com/kyrios12/React_tracker/assets/103828615/cda2039b-5315-4e4a-887d-63886741422a)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://github.com/kyrios12/React_tracker/assets/103828615/35cef610-ad4f-4637-a738-245b90648fb8)
+![image](https://github.com/kyrios12/React_tracker/assets/103828615/d0a53a4f-54d1-4d88-acaa-f6bbd8b1328c)
+![image](https://github.com/kyrios12/React_tracker/assets/103828615/c904d7ae-dc4f-470a-b293-5221d12571a9)
 
-### `npm run build`
+![image](https://github.com/kyrios12/React_tracker/assets/103828615/9ce88d88-b7bc-46af-9ab5-192c675b1a9b)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Home Page
+![image](https://github.com/kyrios12/React_tracker/assets/103828615/e76481b5-2809-4724-b9a2-f90a8bb634c5)
+### Streak Page
+![image](https://github.com/kyrios12/React_tracker/assets/103828615/ee3043de-f3f8-48aa-93ff-7399895ee06b)
+### Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Navbar Component**: ![image](https://github.com/kyrios12/React_tracker/assets/103828615/8f32f2f4-0119-49f2-8731-b0b3b501d0bb)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **AddHabit Component**: ![image](https://github.com/kyrios12/React_tracker/assets/103828615/2c42ac6c-fc71-4ff5-9dd7-4c9c42c19468)
 
-### `npm run eject`
+- **HabitList Component**: ![image](https://github.com/kyrios12/React_tracker/assets/103828615/84b3b61a-b4a2-4749-8c42-3f0dbaa24df9)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Flag Button**: ![image](https://github.com/kyrios12/React_tracker/assets/103828615/a5aa2a3f-ffb3-427e-93d6-bb83da3f6b97)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Streak Component**: ![image](https://github.com/kyrios12/React_tracker/assets/103828615/e364163d-e6fa-4243-95b8-7b1cb2675604)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Routes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Landing Route**: http://localhost:3000/
+- **Streak Route**: http://localhost:3000/weekly
+- 
+## Exception Handling
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Exceptions are handled for scenarios like:
+- When no habit is present.
+- When deleting a habit.
